@@ -1,4 +1,4 @@
-use 5.008001;
+use 5.010;
 use strict;
 use warnings;
 
@@ -28,7 +28,7 @@ The function returns a compiled regular expression.
 =cut
 
 sub to_regexp {
-  my ($like);
+  my ($like) = @_;
   my $re = '';
 
   my %anchors = (
