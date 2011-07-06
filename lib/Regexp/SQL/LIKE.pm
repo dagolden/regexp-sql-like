@@ -96,7 +96,7 @@ equivalent.
 Currently, only {%} and {.} wildcards are supported and only {\ } is
 supported as an escape character.
 
-No functions are exported by default.  You may rename function on import as
+No functions are exported by default.  You may rename a function on import as
 follows:
 
   use Regexp::SQL::Like to_regexp => { -as => 'regexp_from_like' };
