@@ -42,8 +42,8 @@ sub to_regexp {
 
   for my $p ( @parts ) {
     next unless length $p;
-    my $backslash_count =()= $p =~ m{\\}g; 
-    my $wild_count =()= $p =~ m{[%.]}g; 
+    my $backslash_count =()= $p =~ m{(\\)}g; 
+    my $wild_count =()= $p =~ m{([%.])}g; 
     if ($wild_count) {
       if ( $backslash_count && $backslash_count % 2 ) {
         # odd slash count, so wild card is escaped 
